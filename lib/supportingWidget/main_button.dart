@@ -12,7 +12,7 @@ class MainButton extends StatelessWidget {
   final double radius;
   final double elevation;
   final double height;
-  final double width;
+  final double? width;
   final Color borderColor;
   final double titleSize;
   final VisualDensity? visualDensity;
