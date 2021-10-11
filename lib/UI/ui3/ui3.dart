@@ -90,16 +90,63 @@ class _UI3State extends State<UI3> {
                           fit: BoxFit.cover,
                           imageUrl: place[index]["img"],
                         ),
+
+                        Positioned(
+                          left: 0,
+                          right: 0,
+                          top: 0,
+                          bottom: 0,
+                          child: IgnorePointer(
+                            child: Container(
+                              decoration: BoxDecoration(
+                                gradient: LinearGradient(
+                                  begin: Alignment.bottomRight,
+                                  end: Alignment.topLeft,
+                                  colors: [
+                                    Colors.black.withOpacity(0),
+                                    Colors.black.withOpacity(.1),
+                                    Colors.black.withOpacity(.2),
+                                    Colors.black.withOpacity(.4),
+                                    Colors.black.withOpacity(.7),
+                                  ],
+                                ),
+                              ),
+                            ),
+                          ),
+                        ),
+
+
                         Positioned(
                           top: 12,
                           left: 10,
-                          child: Text(
-                            place[index]["name"],
-                            style: TextStyle(
-                              color: Colors.white,
-                              fontWeight: FontWeight.w700,
-                              fontSize: 15
-                            ),
+                          child: Column(
+                            crossAxisAlignment: CrossAxisAlignment.start,
+                            children: [
+                              Text(
+                                place[index]["name"],
+                                style: TextStyle(
+                                  color: Colors.white,
+                                  fontWeight: FontWeight.w700,
+                                  fontSize: 15
+                                ),
+                              ),
+                              SizedBox(height: 4),
+                              Text(
+                                "1 Room - 2 Adults",
+                                style: TextStyle(
+                                    color: Colors.white.withOpacity(.8),
+                                    fontSize: 11
+                                ),
+                              ),
+                              SizedBox(height: 2),
+                              Text(
+                                "12 - 22 Dec",
+                                style: TextStyle(
+                                    color: Colors.white.withOpacity(.8),
+                                    fontSize: 11
+                                ),
+                              )
+                            ],
                           ),
                         )
                       ],
