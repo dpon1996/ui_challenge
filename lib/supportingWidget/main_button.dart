@@ -1,6 +1,4 @@
-
 import 'package:flutter/material.dart';
-
 
 class MainButton extends StatelessWidget {
   final String title;
@@ -17,6 +15,7 @@ class MainButton extends StatelessWidget {
   final double titleSize;
   final VisualDensity? visualDensity;
   final Widget? child;
+  final FontWeight fontWeight;
 
   const MainButton({
     Key? key,
@@ -34,12 +33,12 @@ class MainButton extends StatelessWidget {
     this.titleSize = 17,
     this.visualDensity,
     this.child,
+    this.fontWeight = FontWeight.w700,
   }) : super(key: key);
 
   @override
   Widget build(BuildContext context) {
     return MaterialButton(
-
       onPressed: onTap,
       color: color,
       height: height,
@@ -63,7 +62,7 @@ class MainButton extends StatelessWidget {
                   title,
                   style: TextStyle(
                     color: titleColor,
-                    fontWeight: FontWeight.w700,
+                    fontWeight: fontWeight,
                     letterSpacing: .9,
                     fontSize: titleSize,
                   ),

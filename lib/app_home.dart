@@ -1,6 +1,7 @@
 import 'package:flutter/material.dart';
 import 'package:ui_challenge/UI/ui1/ui1.dart';
 import 'package:ui_challenge/UI/ui2/ui2.dart';
+import 'package:ui_challenge/UI/ui3/ui3.dart';
 import 'package:ui_challenge/controls/navigationHelper.dart';
 import 'package:ui_challenge/supportingWidget/main_button.dart';
 
@@ -37,6 +38,16 @@ class _AppHomeState extends State<AppHome> {
               push(context, UI2());
             },
           ),
+
+          SizedBox(height: 16),
+          ///ui 3
+          MainButton(
+            title: "UI 3",
+            onTap: () {
+              push(context, UI3());
+            },
+          ),
+
         ],
       ),
     );
