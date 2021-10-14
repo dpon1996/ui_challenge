@@ -6,6 +6,8 @@ import 'package:ui_challenge/UI/ui4/ui4.dart';
 import 'package:ui_challenge/controls/navigationHelper.dart';
 import 'package:ui_challenge/supportingWidget/main_button.dart';
 
+import 'UI/ui5/ui5.dart';
+
 class AppHome extends StatefulWidget {
   const AppHome({Key? key}) : super(key: key);
 
@@ -55,6 +57,15 @@ class _AppHomeState extends State<AppHome> {
             title: "UI 4",
             onTap: () {
               push(context, UI4());
+            },
+          ),
+
+          SizedBox(height: 16),
+          ///ui 5
+          MainButton(
+            title: "UI 5",
+            onTap: () {
+              push(context, UI5());
             },
           ),
 
